@@ -1,0 +1,16 @@
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">idarbitre</th>
+        <th scope="col">nationality</th>
+        <th scope="col">name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let arbitre of arbitres">
+        <td>{{arbitre.idarbitre}}</td>
+        <td>{{arbitre.nationality}}</td>
+        <td>{{arbitre.name}}</td>
+    </tr>
+    </tbody>
+  </table>
