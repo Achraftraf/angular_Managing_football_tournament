@@ -16,11 +16,23 @@ export class ListComponent {
   // ]
   backEndURL = "http://localhost:8080/arbitres";
   arbitres:any
+event: any;
   constructor (private http:HttpClient){}
   ngOnInit(){
     this.http.get(this.backEndURL).subscribe(data=>{
       console.log(data);
       this.arbitres = data
     })
+  }
+  supprimer(event:MouseEvent){
+    const element=event.target as  HTMLElement
+
+    // document.getElementById(element.id)?.remove()
+    // console.log(element.id)
+    this.http.delete(this.backEndURL+"/"+element.id).subscribe(data=>{
+  // this.ngOnInit()
+  element.parentElement?.parentElement?.remove()
+    })
+  
   }
 }

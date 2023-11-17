@@ -8,6 +8,7 @@ import { MenuComponent } from './arbitre/menu/menu.component';
 import { FormComponent } from './arbitre/form/form.component';
 import { ListComponent } from './arbitre/list/list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
