@@ -4,6 +4,7 @@
         <th scope="col">idarbitre</th>
         <th scope="col">nationality</th>
         <th scope="col">name</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -11,6 +12,7 @@
         <td>{{arbitre.idarbitre}}</td>
         <td>{{arbitre.nationality}}</td>
         <td>{{arbitre.name}}</td>
+        <td><img id="{{arbitre.idarbitre}}" (click)="supprimer($event)" class="icone" src="https://cdn3.iconfinder.com/data/icons/softwaredemo/PNG/256x256/DeleteRed.png"  ></td>
     </tr>
     </tbody>
   </table>
