@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmComponent } from '../confirm/confirm.component';
 
 @Component({
   selector: 'app-list',
@@ -17,7 +19,8 @@ export class ListComponent {
   backEndURL = "http://localhost:8080/arbitres";
   arbitres:any
 event: any;
-  constructor (private http:HttpClient){}
+
+constructor(private http: HttpClient, private ms: NgbModal){}
   ngOnInit(){
     this.http.get(this.backEndURL).subscribe(data=>{
       console.log(data);
@@ -25,14 +28,22 @@ event: any;
     })
   }
   supprimer(event:MouseEvent){
-    const element=event.target as  HTMLElement
+    this.ms.open(ConfirmComponent).result.then(data=>{
+      if(data == "ok"){
+        const element=event.target as  HTMLElement
+        this.http.delete(this.backEndURL+"/"+element.id).subscribe(data=>{
+          element.parentElement?.parentElement?.remove()
+        })
+      }
+        })
+  //   const element=event.target as  HTMLElement
 
-    // document.getElementById(element.id)?.remove()
-    // console.log(element.id)
-    this.http.delete(this.backEndURL+"/"+element.id).subscribe(data=>{
-  // this.ngOnInit()
-  element.parentElement?.parentElement?.remove()
-    })
+  //   // document.getElementById(element.id)?.remove()
+  //   // console.log(element.id)
+  //   this.http.delete(this.backEndURL+"/"+element.id).subscribe(data=>{
+  // // this.ngOnInit()
+  // element.parentElement?.parentElement?.remove()
+  //   })
   
   }
 }

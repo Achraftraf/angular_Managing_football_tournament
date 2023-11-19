@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Arbitre deletion</h4>
+    <button
+        type="button"
+        class="btn-close"
+        aria-describedby="modal-title"
+        (click)="modal.dismiss('Cross click')"
+    ></button>
+</div>
+<div class="modal-body">
+    <p>
+        <strong>Do you want to  delete the arbitre</strong>
+    </p>
+    
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.close('cancel')">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close('ok')">Ok</button>
+</div>
