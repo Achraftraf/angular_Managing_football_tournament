@@ -9,6 +9,7 @@ import { FormComponent } from './arbitre/form/form.component';
 import { ListComponent } from './arbitre/list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmComponent } from './arbitre/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ArbitreComponent,
     MenuComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
