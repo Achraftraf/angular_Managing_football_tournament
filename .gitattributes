@@ -1,0 +1,17 @@
+# Force TypeScript files to be recognized as TypeScript
+*.ts linguist-language=TypeScript
+
+# Force Angular specific files to be recognized as TypeScript
+*.component.ts linguist-language=TypeScript
+*.service.ts linguist-language=TypeScript
+*.module.ts linguist-language=TypeScript
+
+# Force HTML files to be recognized as HTML
+*.html linguist-language=HTML
+
+# Force CSS files to be recognized as CSS
+*.css linguist-language=CSS
+
+# Force Bootstrap specific files to be recognized as CSS
+bootstrap.css linguist-language=CSS
+bootstrap.min.css linguist-language=CSS
