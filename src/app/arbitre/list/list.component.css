@@ -3,3 +3,8 @@
     height: 30px;
     cursor: pointer;
 }
+
+.photo {
+    width: 120px;
+    height: 120px;
+}

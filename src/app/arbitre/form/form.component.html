@@ -4,12 +4,18 @@
     <input type="text" class="form-control" id="idArbitre" formControlName="idarbitre">
   </div>
   <div class="form-group">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+    <div>
     <label for="nationality">Nationality</label>
     <input type="text" class="form-control" id="nationality" formControlName="nationality">
-  </div>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+    <div>
+      <label for="nationality">Nationality</label>
+      <input  (change)="fileSelected($event)"  type="file" class="form-control" id="nationality">
+      </div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
