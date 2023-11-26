@@ -10,6 +10,13 @@ import { ListComponent } from './arbitre/list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmComponent } from './arbitre/confirm/confirm.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ArbitreDashboardComponent } from './arbitre/arbitre-dashboard/arbitre-dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,13 +25,20 @@ import { ConfirmComponent } from './arbitre/confirm/confirm.component';
     MenuComponent,
     FormComponent,
     ListComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    ArbitreDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,17 +2,22 @@
     <thead>
       <tr>
         <th scope="col">idarbitre</th>
-        <th scope="col">nationality</th>
         <th scope="col">name</th>
+        <th scope="col">nationality</th>
+        <th></th>
+        <th></th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let arbitre of arbitres">
         <td>{{arbitre.idarbitre}}</td>
-        <td>{{arbitre.nationality}}</td>
         <td>{{arbitre.name}}</td>
+        <td>{{arbitre.nationality}}</td>
+        <td><img  class="photo" src="http://localhost:8080/photos/{{arbitre.idarbitre}}.png" ></td>
+        <!-- |number:'2.2'   pour affficher le nombre des nombres apres la virgule -->
         <td><img id="{{arbitre.idarbitre}}" (click)="supprimer($event)" class="icone" src="https://cdn3.iconfinder.com/data/icons/softwaredemo/PNG/256x256/DeleteRed.png"  ></td>
+        <td><img  (click)="afficherForm(arbitre)" class="icone" src="https://www.freeiconspng.com/thumbs/refresh-icon/blue-refresh-icon-png-6.png"  ></td>
     </tr>
-    </tbody>
+    </tbody>  
   </table>

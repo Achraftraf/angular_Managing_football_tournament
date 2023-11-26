@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmComponent } from '../confirm/confirm.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -20,7 +21,7 @@ export class ListComponent {
   arbitres:any
 event: any;
 
-constructor(private http: HttpClient, private ms: NgbModal){}
+constructor(private http: HttpClient, private ms: NgbModal , private router:Router){}
   ngOnInit(){
     this.http.get(this.backEndURL).subscribe(data=>{
       console.log(data);
@@ -45,5 +46,10 @@ constructor(private http: HttpClient, private ms: NgbModal){}
   // element.parentElement?.parentElement?.remove()
   //   })
   
+  }
+
+  afficherForm(arbitre : any){
+    const jsonArbitre = JSON.stringify(arbitre)
+    this.router.navigate(['arbitre/form'],{queryParams:{'arbitre' :jsonArbitre }})
   }
 }
